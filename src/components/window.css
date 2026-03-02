@@ -1,0 +1,28 @@
+.window {
+  border: 10px solid blue;
+  border-top-width: 20px;
+}
+.window .window-buttons {
+  transform: translateY(-100%);
+}
+.window .window-title {
+  transform: translateY(-70%);
+}
+.window-buttons .window-button {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.window-button a {
+  line-height: 20px;
+}
+.window-button .minimize {
+  transform: translate(60%);
+}
+.window-button .fullscreen {
+  font-size: 10px;
+}
+.window-button .exit {
+  font-size: 20px;
+}
+  
