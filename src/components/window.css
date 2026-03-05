@@ -12,6 +12,13 @@
   width: 20px;
   height: 20px;
   display: inline-block;
+  cursor: default;
+}
+.window-button:hover:not(.exit-button) {
+  background-color: rgb(32, 110, 255);
+}
+.window-button.exit-button:hover {
+  background-color: rgb(250, 74, 74) !important;
 }
 .window-button a {
   line-height: 20px;

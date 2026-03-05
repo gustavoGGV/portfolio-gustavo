@@ -12,14 +12,14 @@ class Window extends React.Component<{ title?: string, content?: React.ReactNode
           <div className="window-title position-absolute top-0 start-0">
             <h6 className="text-white">{title}</h6>
           </div>
-          <div className="window-buttons d-flex position-absolute top-0 end-0">
-            <div className="window-button border border-white d-flex">
+          <div className="window-buttons d-flex position-absolute top-0 end-0 gap-1">
+            <div className="window-button border border-white d-flex rounded-1">
               <a className="minimize text-decoration-none text-white position-absolute fw-bold">-</a>
             </div>
-            <div className="window-button border border-white d-flex justify-content-center align-items-center">
+            <div className="window-button border border-white d-flex rounded-1 justify-content-center align-items-center">
               <a className="fullscreen text-decoration-none text-white text-center fw-bold"><i className="bi bi-window-fullscreen"></i></a>
             </div>
-            <div className="window-button border border-white d-flex justify-content-center align-items-center bg-danger">
+            <div className="window-button exit-button border border-white d-flex rounded-1 justify-content-center align-items-center bg-danger">
               <a className="exit text-decoration-none text-white text-center fw-bold"><i className="bi bi-x"></i></a>
             </div>
           </div>
