@@ -11,14 +11,13 @@
 .window-buttons .window-button {
   width: 20px;
   height: 20px;
-  display: inline-block;
   cursor: default;
 }
-.window-button:hover:not(.exit-button) {
-  background-color: rgb(32, 110, 255);
+.window-buttons .window-button:not(.exit-button):hover {
+  background-color: rgb(83, 143, 255) !important;
 }
 .window-button.exit-button:hover {
-  background-color: rgb(250, 74, 74) !important;
+  background-color: rgb(248, 111, 111) !important;
 }
 .window-button a {
   line-height: 20px;
@@ -32,4 +31,3 @@
 .window-button .exit {
   font-size: 20px;
 }
-  
