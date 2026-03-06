@@ -2,21 +2,26 @@ import * as React from 'react';
 import "./window.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-class Window extends React.Component<{ title?: string, content?: React.ReactNode }> {
+class Window extends React.Component<{ title?: string, content?: React.ReactNode, setDesktopMargin?: any }> {
   state = {
-    windowDisplay: ""
+    windowDisplay: "",
+    borderRadius: "rounded-2"
   }
 
   closeWindow = () => {
     this.setState({ windowDisplay: "d-none" })
   }
 
+  setBorderRadius = () => {
+    this.state.borderRadius === "rounded-2" ? this.setState({ borderRadius: "" }) : this.setState({ borderRadius: "rounded-2" })
+  }
+
   render() {
-    const { title, content } = this.props;
-    const { windowDisplay } = this.state
+    const { title, content, setDesktopMargin } = this.props;
+    const { windowDisplay, borderRadius } = this.state
 
     return (
-      <div className={`window bg-white rounded-2 text-black position-relative h-25 ${windowDisplay}`}>
+      <div className={`window bg-white ${borderRadius} text-black position-relative h-25 ${windowDisplay}`}>
         <div className="window-header">
           <div className="window-title position-absolute top-0 start-0">
             <h6 className="text-white">{title}</h6>
@@ -25,7 +30,7 @@ class Window extends React.Component<{ title?: string, content?: React.ReactNode
             <div className="window-button border border-white d-flex rounded-1 bg-primary" onClick={this.closeWindow}>
               <a className="minimize text-decoration-none text-white position-absolute fw-bold">-</a>
             </div>
-            <div className="window-button border border-white d-flex rounded-1 bg-primary justify-content-center align-items-center">
+            <div className="window-button border border-white d-flex rounded-1 bg-primary justify-content-center align-items-center" onClick={() => { setDesktopMargin(); this.setBorderRadius(); }}>
               <a className="fullscreen text-decoration-none text-white text-center fw-bold"><i className="bi bi-window-fullscreen"></i></a>
             </div>
             <div className="window-button exit-button border border-white d-flex rounded-1 justify-content-center align-items-center bg-danger" onClick={this.closeWindow}>
